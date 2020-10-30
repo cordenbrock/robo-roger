@@ -1,15 +1,38 @@
 /* variables */
 
 :root {
-    --greenish:  rgb(22, 235, 15);
-    --blackish: rgba(0, 0, 0, 0.849);
+    --greenish:  rgb(8, 228, 0);
+    --blackish: rgb(0, 0, 0);
     --cpu-font: 'Press Start 2P', cursive;
 }
 
-/* styles */
+/* tags */
 
 body {
-    background: var(--blackish);
+    background: url("../img/binary-bgd.jpg") no-repeat fixed;
+    background-size: cover;
+    color: var(--blackish);
+    font-family: var(--cpu-font);
+    display: flex;
+    text-align: center; 
+}
+
+/* custom classes/ids */
+
+.col-custom {
+    display: none;
     color: var(--greenish);
-    font-family: var(--cpu-font); 
+    background: rgba(0, 0, 0, 0.548);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 65%;
+    font-size: .75rem;
+    text-align: justify;
+}
+
+#number {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 25%;
 }
