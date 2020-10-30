@@ -35,6 +35,7 @@ $(document).ready(() => {
         roboResult = robofiedArray.join(' ')
         if (userNumber > 0) {
             $("#output").text(roboResult);
+            $("#output").show();
         } else {
             alert("invalid un-neighborly input")
         }
