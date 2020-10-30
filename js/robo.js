@@ -1,6 +1,5 @@
 // Controller -- Business logic
 
-// collects input and populates an array from 0 to userNumber  
 function populateUserArray(num) {
     let numArray = [];
     for (let i = 0; i <= num; i++) {
@@ -8,7 +7,6 @@ function populateUserArray(num) {
     }
     return numArray;
 };
-//  iterates through array, converts each element to a string, "robofies" certain elements, returns "robofied" array
 function robofyArray(num) {
     num = num.toString();
     if (num.includes(3)) {
@@ -24,25 +22,21 @@ function robofyArray(num) {
 
 // DOM -- UI logic
 $(document).ready(() => {
-    // form submission
+
     $('#form').submit(e => {
         e.preventDefault();
-        // collect user input, converts to number data type
+   
         let userNumber, userArray, robofiedArray, roboResult;
         userNumber = parseInt($('#number').val());
-        // generate robo array
         userArray = populateUserArray(userNumber);
-        // iterate through robo array and return new array with robofied elements
         robofiedArray = userArray.map(num => {
             return robofyArray(num);
           });
-        // convert robofied array to string for output
         roboResult = robofiedArray.join(' ')
-        // display result || invalidate input
         if (userNumber > 0) {
             $("#output").text(roboResult);
         } else {
-            alert("invalid input")
+            alert("invalid un-neighborly input")
         }
     })
 });
