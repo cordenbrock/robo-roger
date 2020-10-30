@@ -11,7 +11,6 @@ function populateUserArray(num) {
 //  iterates through array, converts each element to a string, "robofies" certain elements, returns "robofied" array
 function robofyArray(num) {
     num = num.toString();
-    console.log(num)
     if (num.includes(3)) {
         return "neighbor!!!";
       } else if (num.includes(2)) {
@@ -29,17 +28,19 @@ $(document).ready(() => {
     $('#form').submit(e => {
         e.preventDefault();
         // collect user input, converts to number data type
-        let userNumber, userArray, roboResult;
+        let userNumber, userArray, robofiedArray, roboResult;
         userNumber = parseInt($('#number').val());
         // generate robo array
         userArray = populateUserArray(userNumber);
         // iterate through robo array and return new array with robofied elements
-        roboResult = userArray.map(num => {
+        robofiedArray = userArray.map(num => {
             return robofyArray(num);
           });
+        // convert robofied array to string for output
+        roboResult = robofiedArray.join(' ')
         // display result || invalidate input
         if (userNumber > 0) {
-            $("#output").text(roboResult.join(' '));
+            $("#output").text(roboResult);
         } else {
             alert("invalid input")
         }

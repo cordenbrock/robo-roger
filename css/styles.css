@@ -1,3 +1,15 @@
+/* variables */
+
+:root {
+    --greenish:  rgb(22, 235, 15);
+    --blackish: rgba(0, 0, 0, 0.849);
+    --cpu-font: 'Press Start 2P', cursive;
+}
+
+/* styles */
+
 body {
-    background: rgba(0, 0, 0, 0.849);
+    background: var(--blackish);
+    color: var(--greenish);
+    font-family: var(--cpu-font); 
 }
