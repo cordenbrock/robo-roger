@@ -2,14 +2,14 @@
 
 :root {
     --greenish:  rgb(8, 228, 0);
-    --blackish:  rgba(0, 0, 0, 0.671);
+    --blackish:  rgba(0, 0, 0, 0.849);
     --cpu-font: 'Press Start 2P', cursive;
 }
 
 /* tags */
 
 body {
-    background: url("../img/binary-bgd.jpg") no-repeat fixed;
+    background: url("../media/binary-bgd.jpg") no-repeat fixed;
     background-size: cover;
     color: black;
     font-family: var(--cpu-font);
@@ -23,26 +23,28 @@ body {
 .col-custom {
     display: none;
     color: var(--greenish);
-    background: rgba(0, 0, 0, 0.548);
+    background:var(--blackish);
     border-radius: 8px;
     padding: 2rem;
     margin: 0 auto 2rem auto;
     max-width: 65%;
     font-size: .75rem;
     text-align: center;
+    text-shadow: none;
     box-shadow: 0 0 .5rem var(--greenish)
 }
 
 .btn-custom {
-    background-color: black;
+    background-color: var(--blackish);
     color: var(--greenish);
     border-radius: 8px;
+    box-shadow: 0 0 .1rem var(--greenish);
 }
 
 .btn-custom:hover {
     background-color: black;
     color: var(--greenish);
-    box-shadow: 0 0 .75rem var(--greenish);
+    box-shadow: 0 0 1rem var(--greenish);
 }
 
 #number {
